@@ -1,0 +1,13 @@
+operator + motion! and sometimes double operator = motion
+
+	yyp copies line and pastes it underneath
+	<number>CTRL+X subtracts from first number it finds
+	<number>CTRL+A adds to first number it finds
+	daw deletes a word
+	dap deletes a paragraph
+	gu+l/h = single lowercase
+	gU+l/h = single uppercase
+	gUaw = SHOUTY case
+	guu = line lowercase
+	gUU = line uppercase
+	{} = navigate beginning and end of code block
