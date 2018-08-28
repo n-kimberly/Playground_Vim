@@ -1,0 +1,14 @@
+Insert Mode
+	
+	^h = backspace one character
+	^w = backspace one word
+	^u = backspace one line
+	
+	^r = paste from register
+	^V = paste from clipboard
+	^v = paste in special character
+
+	^o = one shot from normal mode
+	^r = replace one char
+	^R = Replace sticky
+	gR = virtual replace, treats tabs as mult. spaces
