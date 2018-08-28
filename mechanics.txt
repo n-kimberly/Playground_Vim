@@ -1,0 +1,41 @@
+changes
+	x = delete single char in place, remain in normal
+	dd = deletes in place, whole line
+	. = repeats last change, micro macro
+	>G = indents all lines curr -> end
+	>H = indents all lines curr -> beg
+	<G = unindents
+	<H = unindents
+	c = change word
+	C = c$, change until end of line
+	s = cl, change one letter to the right
+
+movements
+	^ = move to first char of line
+	f = find <letter/symbol>
+	; = repeats last search
+	, = repeats last search in reverse
+
+Intent				Act			Repeat	Reverse
+Make a change			{edit}			.	u
+Scan line for next char		f{char}/t{char}		;	,	
+Scan line for previous char	F{char}/T{char}		;	,
+Scan doc for next match		/patt<ENTER>		n	N
+Scan doc for previous match	?patt<ENTER>		n	N
+Perform substitution		:s/target/replace	&	u
+Execute sequence of changes	qx{changes}q		@x	u
+
+Fun Combinations
+	adding spaces around operations
+		first, find operators: f<operator>
+		second, substitute: s<space><operator><space>
+		third, colon to goto next find: ;
+		fourth, use dot operator to perform same substitution:
+		; . ; . etc.
+	find and replace
+		:%s/line/row/gc - gives you option to confirm each in doc
+		but we can also just put our cursor over the word of interest
+		type * 
+		cw the change the word
+		n to switch to next word
+		. to repeat the cw command
