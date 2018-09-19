@@ -1,0 +1,5 @@
+# start up vim without .vimrc
+vim -u NONE -N
+
+# start up vim with essential configuration
+vim -u essential.vim
